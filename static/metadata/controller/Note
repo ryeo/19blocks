@@ -1,0 +1,241 @@
+{
+    "type": "controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Note"
+    },
+    "id": "ExtBox1-ext-gen19055",
+    "designerId": "615185d6-f19b-4b96-b3da-f8ad5fed0d85",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onEditNote",
+                "fn": "onEditNote",
+                "designer|params": [
+                    "record"
+                ],
+                "implHandler": [
+                    "console.log('Caught: Edit Note Fire Event');\r",
+                    "var item = this.getMainNav().id;\r",
+                    "console.log(item);\r",
+                    "//var newNote = Ext.create(\"TouchNote.model.Note\");\r",
+                    "//this.getNoteEditor().setRecord(record);\r",
+                    "//this.getMainNav().push(this.getNoteEditor());\r",
+                    "\r",
+                    "console.log(record);\r",
+                    "//var newNote = Ext.create(\"TouchNote.model.Note\");\r",
+                    "var insNoteEdit=Ext.create('TouchNote.view.NoteEditor');\r",
+                    "\r",
+                    "insNoteEdit.setRecord(record);\r",
+                    "//var noteid=insNoteEdit.down('#noteset').id;\r",
+                    "//console.log(noteid);\r",
+                    "//insNoteEdit.down('#noteset').setRecord(record);\r",
+                    "this.getMainNav().push(insNoteEdit);"
+                ],
+                "name": "editNoteCommand",
+                "designer|targetType": "MainPanel",
+                "designer|controlQuery": "mainpanel"
+            },
+            "designerId": "0adfeea2-c2aa-4392-8b13-6604a24634eb"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "mainPanel",
+                "ref": "mainPanel",
+                "selector": "mainpanel"
+            },
+            "designerId": "eab8a240-8a42-4f94-8222-62129fbe4fef"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "mainNav",
+                "designer|displayName": "mainNav",
+                "ref": "mainNav",
+                "selector": "mainNav",
+                "xtype": null
+            },
+            "designerId": "eb801050-2cdd-489f-9d65-676d97b1f908"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "noteListContainer",
+                "ref": "noteListContainer",
+                "selector": "#notelistcontainer"
+            },
+            "designerId": "e5d79bd9-dae6-453d-b57a-1bb4b2a2dc04"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "noteEditor",
+                "ref": "noteEditor",
+                "selector": "noteEditor",
+                "xtype": null
+            },
+            "designerId": "ee711010-fbfc-4a1e-90d7-15074d9fa3aa"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "noteList",
+                "ref": "noteList",
+                "selector": "#notelist"
+            },
+            "designerId": "d4c5405e-f502-4d2a-8a05-a3449529db64"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "searchBar",
+                "ref": "searchBar",
+                "selector": "#searchbar"
+            },
+            "designerId": "8347ef7b-669f-4a10-a251-74b3b0233e84"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "searchField",
+                "ref": "searchField",
+                "selector": "#searchbar > toolbar > searchfield"
+            },
+            "designerId": "dd3f602c-e299-4462-9688-1ee5d688672d"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onAddNote",
+                "fn": "onAddNote",
+                "implHandler": [
+                    "console.log('Caught: Add Note Fire Event');\r",
+                    "//var newNote = Ext.create('TouchNote.model.Note');\r",
+                    "//var noteidemt = newNote.fields;\r",
+                    "//console.log(noteidemt);\r",
+                    "//this.getNoteEditor().setRecord(newNote);\r",
+                    "//Ext.Viewport.animateActiveItem(this.getNoteEditor(), { type: \"slide\", direction: \"left\" });\r",
+                    "\r",
+                    "//var item = this.getMainNav().id;\r",
+                    "\r",
+                    "//var item = this.getNoteEditor().docked;\r",
+                    "//var item = this.getMainPanel().id;\r",
+                    "\r",
+                    "//var zzz=Ext.Container.getComponent()\r",
+                    "\r",
+                    "//var item = this.getMainNav().id;\r",
+                    "//console.log(item);\r",
+                    "\r",
+                    "\r",
+                    "//var item = this.getNoteEditor().id;\r",
+                    "//var item = this.getTestPanel().id;\r",
+                    "//console.log(item);\r",
+                    "\r",
+                    "//var panelid=Ext.ComponentQuery.query('testPanel')[0].id;\r",
+                    "//console.log('Query TestPanel');\r",
+                    "//console.log(panelid);\r",
+                    "\r",
+                    "var panelid=Ext.ComponentQuery.query('mainpanel')[0].id;\r",
+                    "console.log('Query MainPanel');\r",
+                    "console.log(panelid);\r",
+                    "\r",
+                    "var mainnav_instance=Ext.ComponentQuery.query('mainNav')[0];\r",
+                    "//var tabPanel = Ext.create('TouchNote.view.TestPanel',{\r",
+                    "//    items:[ \r",
+                    "//            {title: 'Test Panel'}\r",
+                    "//        ]\r",
+                    "//});\r",
+                    "\r",
+                    "// var tabPanel = Ext.create('TouchNote.view.TestPanel');\r",
+                    "\r",
+                    "//mainnav_instance.push({\r",
+                    "//    xtype:'testPanel',\r",
+                    "//    title: 'Test Panel'\r",
+                    "//});\r",
+                    "\r",
+                    "var newNote = Ext.create(\"TouchNote.model.Note\");\r",
+                    "var insNoteEdit=Ext.create('TouchNote.view.NoteEditor');\r",
+                    "this.getNoteEditor().setRecord(newNote);\r",
+                    "var itemid=mainnav_instance.down('#addbtn').id;\r",
+                    "console.log(itemid);\r",
+                    "//?Ext.container.getComponent\r",
+                    "//mainnav_instance.down('#addbtn').hide();\r",
+                    "//mainnav_instance.push(insNoteEdit);\r",
+                    "//mainnav_instance.push(this.getNoteEditor());\r",
+                    "this.getMainNav().push(this.getNoteEditor());"
+                ],
+                "name": "addNoteCommand",
+                "designer|targetType": "MainNav",
+                "designer|controlQuery": "mainNav"
+            },
+            "designerId": "330e488f-8bbb-4fc8-93d2-4fa48f48d11f"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "testPanel",
+                "autoCreate": true,
+                "ref": "testPanel",
+                "selector": "testPanel",
+                "xtype": "testPanel"
+            },
+            "designerId": "6aca564d-0721-4260-ae04-d3e8d2f390cf"
+        }
+    ]
+}

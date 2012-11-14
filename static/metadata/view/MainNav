@@ -1,0 +1,240 @@
+{
+    "type": "navigationview",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MainNav",
+        "designer|userAlias": "mainNav",
+        "designer|initialView": true,
+        "fullscreen": true,
+        "id": "mainNavv",
+        "itemId": "",
+        "autoDestroy": false
+    },
+    "id": "ExtBox1-ext-gen7403",
+    "designerId": "4bf16f62-d0a2-459b-bbf1-9e9a8f6600ac",
+    "cn": [
+        {
+            "type": "customevent",
+            "reference": {
+                "name": "customEvents",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "CustomEvent",
+                "name": "addNoteCommand"
+            },
+            "designerId": "9dce333d-5a19-4237-b01c-5db9d0e85ce4"
+        },
+        {
+            "type": "navigationbar",
+            "reference": {
+                "name": "navigationBar",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|pack": "center",
+                "designer|userClassName": "MyNavigationBar",
+                "id": "navbar"
+            },
+            "designerId": "2e80e654-526c-4d6d-b6a0-939b4f0720d7",
+            "cn": [
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": 1,
+                        "align": "right",
+                        "designer|userClassName": "MyButton1",
+                        "designer|displayName": "AddButton",
+                        "id": "addtest",
+                        "itemId": "addbtn",
+                        "showAnimation": [
+                            "{type: 'fadeIn',duration: 200}"
+                        ],
+                        "iconAlign": "center",
+                        "iconCls": "compose",
+                        "iconMask": true,
+                        "text": ""
+                    },
+                    "designerId": "f9f4fdcf-eff3-4dd5-b231-c7983680f10e",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "onAddNote",
+                                "fn": "onAddNote",
+                                "implHandler": [
+                                    "console.log(\"Add Tap\");\r",
+                                    "this.fireEvent('addNoteCommand',this);\r",
+                                    "console.log('Fire Event addNoteCommand');"
+                                ],
+                                "name": "tap"
+                            },
+                            "designerId": "55343ebe-e595-4b39-a01c-6f6ad8a0ecea"
+                        }
+                    ]
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "align": "right",
+                        "designer|userClassName": "MyButton3",
+                        "designer|displayName": "SaveButton",
+                        "hidden": true,
+                        "itemId": "savebtn",
+                        "showAnimation": [
+                            "{type: 'fadeIn',duration: 200}"
+                        ],
+                        "ui": "action",
+                        "text": "Save"
+                    },
+                    "designerId": "a2fef483-a43d-4c72-a155-b3472d757b6b",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "onSavebtnTap",
+                                "fn": "onSavebtnTap",
+                                "implHandler": [
+                                    "console.log('Save Tap');"
+                                ],
+                                "name": "tap"
+                            },
+                            "designerId": "39807432-dee7-4111-9e7b-f9be0a7b2240"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "NoteList",
+                "title": "<div>Note List</div>"
+            },
+            "designerId": "f28e9c08-066c-4442-84ee-7a42df8ae9b0",
+            "masterInstanceId": "ExtBox1-ext-gen8362"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onMainNavvShow",
+                "fn": "onMainNavvShow",
+                "implHandler": [
+                    "console.log('MainNav Show');\r",
+                    "var instance=Ext.ComponentQuery.query('mainNav')[0].id;\r",
+                    "console.log(instance);"
+                ],
+                "name": "show"
+            },
+            "designerId": "f4a34733-7363-47cb-8c28-d2352308b7cd"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onMainNavvInitialize",
+                "fn": "onMainNavvInitialize",
+                "implHandler": [
+                    "console.log('MainNav Init');\r",
+                    "var instance=Ext.ComponentQuery.query('mainNav')[0].id;\r",
+                    "console.log(instance);\r",
+                    "\r",
+                    "var mainnav_instance=Ext.ComponentQuery.query('mainNav')[0];\r",
+                    "var notelist=Ext.ComponentQuery.query('mainpanel')[0];\r",
+                    "\r",
+                    "//mainnav_instance.setActiveItem(0);\r",
+                    "//mainnav_instance.push(notelist);\r",
+                    "\r",
+                    "if (Ext.os.is.Android){\r",
+                    "       console.log('Android');\r",
+                    "}\r",
+                    "else{\r",
+                    "    console.log('Window');\r",
+                    "}"
+                ],
+                "name": "initialize"
+            },
+            "designerId": "223acca7-0518-44ac-a38c-4f05925f3536"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onMainNavvPop",
+                "fn": "onMainNavvPop",
+                "implHandler": [
+                    "console.log('pop');\r",
+                    "navigationView.down('#addbtn').show();\r",
+                    "navigationView.down('#savebtn').hide();\r",
+                    ""
+                ],
+                "name": "pop"
+            },
+            "designerId": "da2d670e-f985-4b3a-99c7-f952473210bb"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onMainNavvPush",
+                "fn": "onMainNavvPush",
+                "implHandler": [
+                    "console.log('push');\r",
+                    "navigationView.down('#addbtn').hide();\r",
+                    "navigationView.down('#savebtn').show();\r",
+                    ""
+                ],
+                "name": "push"
+            },
+            "designerId": "fcb34ed6-82fb-4437-8a14-cad4ee25e4d2"
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "type": "panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "TestPanel",
+        "designer|userAlias": "testPanel",
+        "id": "testpanel",
+        "autoDestroy": false
+    },
+    "id": "ExtBox1-ext-gen17199",
+    "designerId": "23bca3f9-dc62-4a3c-9614-73d229833cb2"
+}

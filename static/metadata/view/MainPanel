@@ -1,0 +1,207 @@
+{
+    "type": "tabpanel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MainPanel",
+        "designer|userAlias": "mainpanel",
+        "fullscreen": true,
+        "id": "mainpanel",
+        "itemId": "mainpanel",
+        "autoDestroy": false
+    },
+    "id": "ExtBox1-ext-gen8362",
+    "designerId": "be25f642-f445-4fa2-aa92-c394eb21555c",
+    "cn": [
+        {
+            "type": "customevent",
+            "reference": {
+                "name": "customEvents",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "CustomEvent1",
+                "name": "editNoteCommand",
+                "params": [
+                    "record"
+                ]
+            },
+            "designerId": "3a2239be-3603-411d-8871-f1a7ee8481e9"
+        },
+        {
+            "type": "container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "NoteList",
+                "iconCls": "home",
+                "designer|userClassName": "MyContainer",
+                "itemId": "notelistcontainer",
+                "layout": "fit"
+            },
+            "designerId": "b4db893c-df18-4c51-a40a-719def066674",
+            "cn": [
+                {
+                    "type": "toolbar",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "center",
+                        "container|pack": "end",
+                        "designer|userClassName": "MyToolbar",
+                        "docked": "top",
+                        "itemId": "searchbar",
+                        "ui": "light"
+                    },
+                    "designerId": "a7776b33-4d17-4597-a8d9-844970ca9f8b",
+                    "cn": [
+                        {
+                            "type": "searchfield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": 1,
+                                "designer|userClassName": "MySearchField",
+                                "itemId": "searchfield",
+                                "width": null,
+                                "label": null,
+                                "labelAlign": "right",
+                                "labelWidth": null,
+                                "maxLength": null,
+                                "placeHolder": "Search"
+                            },
+                            "designerId": "641f6e9a-9200-4443-b197-5cf3b1b994df"
+                        },
+                        {
+                            "type": "button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "designer|userClassName": "MyButton",
+                                "designer|displayName": "Search",
+                                "itemId": "mybutton",
+                                "iconAlign": null,
+                                "iconCls": "favorites",
+                                "iconMask": true,
+                                "text": null
+                            },
+                            "designerId": "3d854e6c-664c-4ca0-aee4-f1c5db9e1492",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "onSearch",
+                                        "fn": "onSearch",
+                                        "implHandler": [
+                                            "console.log(\"Search Tap\");"
+                                        ],
+                                        "name": "tap"
+                                    },
+                                    "designerId": "0c7162d1-dac8-44a7-8b6d-dbff7b542eef"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyList",
+                        "designer|displayName": "dataList",
+                        "docked": null,
+                        "height": "",
+                        "id": "dataList",
+                        "itemId": "notelist",
+                        "width": "",
+                        "layout": "fit",
+                        "scrollToTopOnRefresh": false,
+                        "store": "NoteID",
+                        "onItemDisclosure": true
+                    },
+                    "designerId": "426ce96d-186c-4f53-a68c-3de52cb89291",
+                    "cn": [
+                        {
+                            "type": "template",
+                            "reference": {
+                                "name": "itemTpl",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "itemTpl",
+                                "implHandler": [
+                                    "<div>\r",
+                                    "    <div>{content}</div>\r",
+                                    "    <p>{category}</p>\r",
+                                    "</div>"
+                                ],
+                                "designer|displayName": "itemTpl"
+                            },
+                            "designerId": "0b172b7f-2717-4d5f-98b3-2fb009fece78"
+                        },
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "onDataListDisclose",
+                                "fn": "onDataListDisclose",
+                                "implHandler": [
+                                    "console.log('Disclose');\r",
+                                    "this.fireEvent('editNoteCommand', record);\r",
+                                    "console.log('Fire Event editNoteCommand');"
+                                ],
+                                "name": "disclose"
+                            },
+                            "designerId": "0c58754d-2c6c-478a-b2f2-50dd100cf8b2"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "tabbar",
+            "reference": {
+                "name": "tabBar",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|pack": "center",
+                "designer|userClassName": "MyTabBar",
+                "docked": "bottom"
+            },
+            "designerId": "9e44f532-5e4f-4aee-9897-81598de9ad24"
+        }
+    ]
+}

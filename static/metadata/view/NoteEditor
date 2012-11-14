@@ -1,0 +1,174 @@
+{
+    "type": "formpanel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "NoteEditor",
+        "designer|userAlias": "noteEditor",
+        "id": "noteeditor",
+        "itemId": "",
+        "layout": "fit"
+    },
+    "id": "ExtBox1-ext-gen2017",
+    "designerId": "6706edfd-9cb1-46b1-a6d6-b919c8b5027b",
+    "cn": [
+        {
+            "type": "toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|align": null,
+                "container|pack": null,
+                "designer|userClassName": "MyToolbar1",
+                "designer|displayName": "addnotetoolbar",
+                "docked": "top",
+                "autoDestroy": false,
+                "title": ""
+            },
+            "designerId": "ab34b5d4-95c2-4589-9b4c-511276fd3cd8",
+            "cn": [
+                {
+                    "type": "spacer",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MySpacer"
+                    },
+                    "designerId": "95b3ac65-511e-45af-b001-0e6c272a8454"
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyButton3",
+                        "designer|displayName": "SaveButton",
+                        "itemId": "savebtn",
+                        "ui": "action",
+                        "text": "Save"
+                    },
+                    "designerId": "8b20b40d-7820-4ec7-9332-332c4cd1ba37",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "onSaveTap",
+                                "fn": "onSaveTap",
+                                "implHandler": [
+                                    ""
+                                ],
+                                "name": "tap"
+                            },
+                            "designerId": "7847769d-36db-4b5d-af8c-610eda58b41b"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "fieldset",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyFieldSet",
+                "designer|displayName": "NoteSet",
+                "id": "robtest",
+                "itemId": "noteset",
+                "title": "MyFieldSet"
+            },
+            "designerId": "483d0772-6a76-4492-8d0b-b6177cc64162",
+            "cn": [
+                {
+                    "type": "textfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyTextField",
+                        "designer|displayName": "content",
+                        "label": "Content",
+                        "name": "content"
+                    },
+                    "designerId": "91935adc-922b-4a4e-b4cc-865cdb4f729c"
+                },
+                {
+                    "type": "selectfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MySelectField",
+                        "designer|displayName": "categoryid",
+                        "label": "Category",
+                        "name": "categoryid",
+                        "displayField": "name",
+                        "store": "Category",
+                        "valueField": "id"
+                    },
+                    "designerId": "b74d33e3-1167-4939-adfc-76b89bff29bb"
+                }
+            ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onShow",
+                "fn": "onShow",
+                "implHandler": [
+                    "if (this.getRecord().phantom)\r",
+                    "{\r",
+                    "this.items.get(0).setTitle(\"<div>Add Note</div>\");\r",
+                    "}\r",
+                    "else\r",
+                    "{\r",
+                    "this.items.get(0).setTitle(\"<div>Edit Note</div>\");\r",
+                    "}\r",
+                    "console.log('Phantom:',this.getRecord().phantom);\r",
+                    "\r",
+                    "//console.log(this.items.get(0).setTitle);\r",
+                    "\r",
+                    "//var ed = Ext.create('TouchNote.model.Note', {\r",
+                    "//    id: 4,\r",
+                    "//    content: 'Blog 4',\r",
+                    "//    categoryid: 2,\r",
+                    "//    category: 'Food'\r",
+                    "//});\r",
+                    "\r",
+                    "// Does setRecord only work with form panel?\r",
+                    "//this.setRecord(ed);"
+                ],
+                "name": "show"
+            },
+            "designerId": "899f4bab-db7d-4593-887f-cab73bd3450c"
+        }
+    ]
+}

@@ -1,0 +1,30 @@
+{
+    "type": "application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "Note",
+            "Category"
+        ],
+        "stores": [
+            "Note",
+            "Category"
+        ],
+        "views": [
+            "MainNav",
+            "MainPanel",
+            "NoteEditor",
+            "TestPanel"
+        ],
+        "name": "TouchNote",
+        "controllers": [
+            "Note"
+        ]
+    },
+    "id": "ExtBox1-ext-gen1500",
+    "designerId": "application"
+}

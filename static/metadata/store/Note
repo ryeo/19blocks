@@ -1,0 +1,36 @@
+{
+    "type": "store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Note",
+        "autoLoad": true,
+        "data": "[{ id: 1, content: \"Blog 1\", categoryid: 1, category: \"Nonsense\"},\r\n{ id: 2, content: \"Blog 2\", categoryid: 1, category: \"Nonsense\" },\r\n{ id: 3, content: \"Blog 3\", categoryid: 2, category: \"Food\" },\r\n{ id: 4, content: \"Blog 4\", categoryid: 2, category: \"Foodeee\" }\r\n]",
+        "model": "Note",
+        "storeId": "NoteID"
+    },
+    "id": "ExtBox1-ext-gen2859",
+    "designerId": "07376301-4fcd-4408-8bd3-46355231a15d",
+    "cn": [
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onStoreLoad",
+                "fn": "onStoreLoad",
+                "implHandler": [
+                    "console.log(\"Load Store\");"
+                ],
+                "name": "load"
+            },
+            "designerId": "257fb87b-1fb3-40ec-a88e-cb3253931bba"
+        }
+    ]
+}

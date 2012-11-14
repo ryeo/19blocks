@@ -1,0 +1,72 @@
+{
+    "type": "datamodel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Category",
+        "designer|userAlias": "category"
+    },
+    "id": "ExtBox1-ext-gen16353",
+    "designerId": "0ef6ce82-2d21-432d-8967-f61bd7f5890b",
+    "cn": [
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field4",
+                "name": "id",
+                "type": "int"
+            },
+            "designerId": "1c6c9020-24d4-43a0-81e1-a9ff903ba28d"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field5",
+                "name": "name",
+                "type": "string"
+            },
+            "designerId": "b0a7c46e-9133-4c08-84ac-653d72b7c860"
+        },
+        {
+            "type": "presencevalidation",
+            "reference": {
+                "name": "validations",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyPresenceValidation3",
+                "designer|displayName": "idPresence",
+                "field": "id"
+            },
+            "designerId": "708aa716-157f-4076-949a-3102623b7495"
+        },
+        {
+            "type": "presencevalidation",
+            "reference": {
+                "name": "validations",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyPresenceValidation4",
+                "designer|displayName": "namePresence",
+                "field": "name"
+            },
+            "designerId": "f8c63860-104c-47ee-95d9-0e542ef348c4"
+        }
+    ]
+}

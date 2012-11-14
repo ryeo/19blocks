@@ -1,0 +1,18 @@
+{
+    "type": "store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Category",
+        "designer|userAlias": "category",
+        "autoLoad": true,
+        "data": "[\r\n        { id: 1, name: \"Nonsense\" },\r\n        { id: 2, name: \"Food\" },\r\n    ]",
+        "model": "Category",
+        "storeId": "Category"
+    },
+    "id": "ExtBox1-ext-gen2216",
+    "designerId": "fd227b7e-4155-46f5-a1fb-e807abc290c1"
+}

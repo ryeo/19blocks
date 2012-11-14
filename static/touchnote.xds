@@ -1,0 +1,121 @@
+{
+    "name": "touchnote",
+    "settings": {
+        "urlPrefix": "http://localhost/sencha/touchnote",
+        "spacesToIndent": 4,
+        "exportPath": "",
+        "lineEnding": "CRLF",
+        "genTimestamps": false,
+        "cacheBust": false
+    },
+    "xdsVersion": "2.1.0",
+    "xdsBuild": 640,
+    "schemaVersion": 1,
+    "upgradeVersion": 210000000498,
+    "framework": "touch20",
+    "topInstanceFileMap": {
+        "362ea19d-f552-4040-9b04-1181b72db617": {
+            "paths": [
+                "metadata/resource/Library"
+            ],
+            "className": "Library"
+        },
+        "4bf16f62-d0a2-459b-bbf1-9e9a8f6600ac": {
+            "paths": [
+                "metadata/view/MainNav",
+                "app/view/override/MainNav.js",
+                "app/view/MainNav.js"
+            ],
+            "className": "MainNav"
+        },
+        "be25f642-f445-4fa2-aa92-c394eb21555c": {
+            "paths": [
+                "metadata/view/MainPanel",
+                "app/view/override/MainPanel.js",
+                "app/view/MainPanel.js"
+            ],
+            "className": "MainPanel"
+        },
+        "52ac46ff-5d7a-4fb0-a128-71da9baea7d4": {
+            "paths": [
+                "metadata/model/Note",
+                "app/model/override/Note.js",
+                "app/model/Note.js"
+            ],
+            "className": "Note"
+        },
+        "07376301-4fcd-4408-8bd3-46355231a15d": {
+            "paths": [
+                "metadata/store/Note",
+                "app/store/override/Note.js",
+                "app/store/Note.js"
+            ],
+            "className": "Note"
+        },
+        "6706edfd-9cb1-46b1-a6d6-b919c8b5027b": {
+            "paths": [
+                "metadata/view/NoteEditor",
+                "app/view/override/NoteEditor.js",
+                "app/view/NoteEditor.js"
+            ],
+            "className": "NoteEditor"
+        },
+        "615185d6-f19b-4b96-b3da-f8ad5fed0d85": {
+            "paths": [
+                "metadata/controller/Note",
+                "app/controller/override/Note.js",
+                "app/controller/Note.js"
+            ],
+            "className": "Note"
+        },
+        "23bca3f9-dc62-4a3c-9614-73d229833cb2": {
+            "paths": [
+                "metadata/view/TestPanel",
+                "app/view/override/TestPanel.js",
+                "app/view/TestPanel.js"
+            ],
+            "className": "TestPanel"
+        },
+        "0ef6ce82-2d21-432d-8967-f61bd7f5890b": {
+            "paths": [
+                "metadata/model/Category",
+                "app/model/override/Category.js",
+                "app/model/Category.js"
+            ],
+            "className": "Category"
+        },
+        "fd227b7e-4155-46f5-a1fb-e807abc290c1": {
+            "paths": [
+                "metadata/store/Category",
+                "app/store/override/Category.js",
+                "app/store/Category.js"
+            ],
+            "className": "Category"
+        }
+    },
+    "viewOrderMap": {
+        "view": [
+            "be25f642-f445-4fa2-aa92-c394eb21555c",
+            "6706edfd-9cb1-46b1-a6d6-b919c8b5027b",
+            "23bca3f9-dc62-4a3c-9614-73d229833cb2",
+            "4bf16f62-d0a2-459b-bbf1-9e9a8f6600ac"
+        ],
+        "store": [
+            "07376301-4fcd-4408-8bd3-46355231a15d",
+            "fd227b7e-4155-46f5-a1fb-e807abc290c1"
+        ],
+        "controller": [
+            "615185d6-f19b-4b96-b3da-f8ad5fed0d85"
+        ],
+        "model": [
+            "52ac46ff-5d7a-4fb0-a128-71da9baea7d4",
+            "0ef6ce82-2d21-432d-8967-f61bd7f5890b"
+        ],
+        "resource": [
+            "362ea19d-f552-4040-9b04-1181b72db617"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}
