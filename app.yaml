@@ -27,6 +27,19 @@ handlers:
 - url: .*
   script: main.app
 
+skip_files: |
+ ^(.*/)?(
+ (app\.yaml)|
+ (app\.yml)|
+ (index\.yaml)|
+ (index\.yml)|
+ (#.*#)|
+ (.*~)|
+ (.*\.py[co])|
+ (.*/RCS/.*)|
+ (\..*)|
+ (/static/metadata/.*)|
+ )$
 
 libraries:
 - name: webapp2
