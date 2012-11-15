@@ -58,9 +58,6 @@
                         "designer|displayName": "AddButton",
                         "id": "addtest",
                         "itemId": "addbtn",
-                        "showAnimation": [
-                            "{type: 'fadeIn',duration: 200}"
-                        ],
                         "iconAlign": "center",
                         "iconCls": "compose",
                         "iconMask": true,
@@ -102,9 +99,6 @@
                         "designer|displayName": "SaveButton",
                         "hidden": true,
                         "itemId": "savebtn",
-                        "showAnimation": [
-                            "{type: 'fadeIn',duration: 200}"
-                        ],
                         "ui": "action",
                         "text": "Save"
                     },
@@ -121,7 +115,8 @@
                                 "designer|userClassName": "onSavebtnTap",
                                 "fn": "onSavebtnTap",
                                 "implHandler": [
-                                    "console.log('Save Tap');"
+                                    "console.log('Save Tap');\r",
+                                    "//showAnimateion {type: 'fadeIn',duration: 200}"
                                 ],
                                 "name": "tap"
                             },

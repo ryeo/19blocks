@@ -39,10 +39,6 @@ Ext.define('TouchNote.view.MainNav', {
                     align: 'right',
                     id: 'addtest',
                     itemId: 'addbtn',
-                    showAnimation: {
-                        type: 'fadeIn',
-                        duration: 200
-                    },
                     iconAlign: 'center',
                     iconCls: 'compose',
                     iconMask: true,
@@ -53,10 +49,6 @@ Ext.define('TouchNote.view.MainNav', {
                     align: 'right',
                     hidden: true,
                     itemId: 'savebtn',
-                    showAnimation: {
-                        type: 'fadeIn',
-                        duration: 200
-                    },
                     ui: 'action',
                     text: 'Save'
                 }
@@ -106,6 +98,7 @@ Ext.define('TouchNote.view.MainNav', {
 
     onSavebtnTap: function(button, e, options) {
         console.log('Save Tap');
+        //showAnimateion {type: 'fadeIn',duration: 200}
     },
 
     onMainNavvShow: function(component, options) {

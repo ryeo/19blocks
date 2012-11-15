@@ -31,7 +31,6 @@ import os
 template_dir = os.path.join(os.path.dirname(__file__), 'templates')
 jinja_environment = jinja2.Environment(
    loader=jinja2.FileSystemLoader(template_dir))
-logging.basicConfig(level=logging.WARNING)
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
@@ -49,7 +48,7 @@ class MainHandler(webapp2.RequestHandler):
 #        Log.setLevel(level)
 #        logging.basicConfig(level=logging.WARNING)
 
-
+        logging.getLogger().setLevel(logging.DEBUG)
         template = jinja_environment.get_template('app.html')
         template_values = {}
         self.response.out.write(template.render(template_values))
