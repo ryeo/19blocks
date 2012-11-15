@@ -31,14 +31,25 @@ import os
 template_dir = os.path.join(os.path.dirname(__file__), 'templates')
 jinja_environment = jinja2.Environment(
    loader=jinja2.FileSystemLoader(template_dir))
-
-# create logger
-logger = logging.getLogger('simple_example')
-logger.setLevel(logging.DEBUG)
+logging.basicConfig(level=logging.WARNING)
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
 #        self.response.write('Hello world!')
+
+#        Log = logging.getLogger('myLogger')
+#        Log = logging.getLogger()
+#        levels = {'CRITICAL' : logging.CRITICAL,
+#                  'ERROR' : logging.ERROR,
+#                  'WARNING' : logging. WARNING,
+#                  'INFO' : logging.INFO,
+#                  'DEBUG' : logging.DEBUG
+#}
+#        level = levels['CRITICAL']
+#        Log.setLevel(level)
+#        logging.basicConfig(level=logging.WARNING)
+
+
         template = jinja_environment.get_template('app.html')
         template_values = {}
         self.response.out.write(template.render(template_values))
