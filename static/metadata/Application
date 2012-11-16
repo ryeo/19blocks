@@ -26,5 +26,20 @@
         ]
     },
     "id": "ExtBox1-ext-gen1500",
-    "designerId": "application"
+    "designerId": "application",
+    "cn": [
+        {
+            "type": "viewport",
+            "reference": {
+                "name": "viewport",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "Viewport",
+                "autoMaximize": true
+            },
+            "designerId": "b819b790-3144-44fb-88fd-03038934f0db"
+        }
+    ]
 }

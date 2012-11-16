@@ -18,6 +18,10 @@ Ext.Loader.setConfig({
 });
 
 Ext.application({
+    viewport: {
+        autoMaximize: true
+    },
+
     models: [
         'Note',
         'Category'
